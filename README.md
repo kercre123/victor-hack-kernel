@@ -1,9 +1,18 @@
 # victor-hack-kernel
 
-This kernel will be edited to use RX1/TX1 (BLSP1_UART1) for spine communication instead of RX2/TX2 (BLSP1_UART2) for specific edge cases where you can't use UART2.
+This kernel has been edited to use RX1/TX1 (BLSP1_UART1) for spine communication instead of RX2/TX2 (BLSP1_UART2) for specific edge cases where you can't use UART2.
 
-The main goal is to disable the original spine serial, and put UART2 at a ttyHS*.
+The main files that have been edited are at /arch/arm/boot/dts/qcom/anki*.dtsi
 
-The main files that will need editing are at /arch/arm/boot/dts/qcom/anki*.dtsi
+Build instructions:
 
-I hardly have any clue what I'm doing, so this will probably end up getting a lot of commits.
+`docker run -it vaddio/yocto-16.04:16.04-latest /bin/bash`
+`chmod 0777 . && su builduser`
+`curl https://anki-vic-pubfiles.anki.com/license/prod/1.0.0/licences/OStarball.v160.tgz | tar -xz`
+`rm -rf ~/opensource/kernel/msm-3.18/*`
+`cd ~/opensource/kernel/msm-3.18/`
+`git pull https://github.com/kercre123/victor-hack-kernel.git`
+`cd opensource/poky/build && source conf/set_bb_env.sh`
+`bitbake linux-quic`
+
+The kernel will be built in ~/opensource/poky/build/tmp-glibc/deploy/images/apq8009-robot-robot/zImage-dtb-apq8009-anki.bin
