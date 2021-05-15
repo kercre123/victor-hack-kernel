@@ -402,15 +402,15 @@
 		#address-cells = <0>;
 		interrupt-parent = <&blsp1_uart1_hs>;
 		interrupts = <0 1 2>;
-		interrupt-cells = <1>;
+		#interrupt-cells = <1>;
 		#interrupt-map-mask = <0xffffffff>;
 		#interrupt-map = <0 &intc 0 107 0
 				1 &intc 0 238 0
 				2 &msm_gpio 5 0>;
-		#qcom,inject-rx-on-wakeup;
+		qcom,inject-rx-on-wakeup;
 		qcom,tx-gpio = <&msm_gpio 4 0>;
 		qcom,rx-gpio = <&msm_gpio 5 0>;
-		#qcom,rx-char-to-inject = <0xfd>;
+		qcom,rx-char-to-inject = <0xfd>;
 		qcom,master-id = <86>;
 		clock-names = "core_clk", "iface_clk";
 		clocks = <&clock_gcc clk_gcc_blsp1_uart1_apps_clk>,
