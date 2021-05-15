@@ -6,4 +6,6 @@ The main goal is to disable the original spine serial, and put UART2 at a ttyHS*
 
 The main files that will need editing are at /arch/arm/boot/dts/qcom/anki*.dtsi
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 I hardly have any clue what I'm doing, so this will probably end up getting a lot of commits.
