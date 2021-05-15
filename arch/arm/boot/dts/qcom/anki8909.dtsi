@@ -427,52 +427,52 @@
 	};
 
 
-	blsp1_uart2: serial@78b0000 {
-		compatible = "qcom,msm-lsuart-v14";
-		reg = <0x78b0000 0x200>;
-		interrupts = <0 108 0>;
-		status = "disabled";
-		clocks = <&clock_gcc clk_gcc_blsp1_uart2_apps_clk>,
-			 <&clock_gcc clk_gcc_blsp1_ahb_clk>;
-		clock-names = "core_clk", "iface_clk";
-	};
+//	blsp1_uart2: serial@78b0000 {
+//		compatible = "qcom,msm-lsuart-v14";
+//		reg = <0x78b0000 0x200>;
+//		interrupts = <0 108 0>;
+//		status = "disabled";
+//		clocks = <&clock_gcc clk_gcc_blsp1_uart2_apps_clk>,
+//			 <&clock_gcc clk_gcc_blsp1_ahb_clk>;
+//		clock-names = "core_clk", "iface_clk";
+//	};
 
-	blsp1_uart2_hs: uart@78b0000 {		/*BLSP1 UART2*/
-		compatible = "qcom,msm-hsuart-v14";
-		reg = <0x78b0000 0x200>,
-			<0x7884000 0x1f000>;
-		reg-names = "core_mem", "bam_mem";
-		interrupt-names = "core_irq", "bam_irq", "wakeup_irq";
-		#address-cells = <0>;
-		interrupt-parent = <&blsp1_uart2_hs>;
-		interrupts = <0 1 2>;
-		#interrupt-cells = <1>;
-		interrupt-map-mask = <0xffffffff>;
-		interrupt-map = <0 &intc 0 108 0
-				1 &intc 0 238 0
-				2 &msm_gpio 21 0>;
-		qcom,inject-rx-on-wakeup;
-		qcom,tx-gpio = <&msm_gpio 20 0>;
-		qcom,rx-gpio = <&msm_gpio 21 0>;
-		qcom,rx-char-to-inject = <0xfd>;
-		qcom,master-id = <86>;
-		clock-names = "core_clk", "iface_clk";
-		clocks = <&clock_gcc clk_gcc_blsp1_uart2_apps_clk>,
-				<&clock_gcc clk_gcc_blsp1_ahb_clk>;
-		pinctrl-names = "sleep", "default";
-		pinctrl-0 = <&blsp1_uart2_sleep>;
-		pinctrl-1 = <&blsp1_uart2_active>;
-
-		qcom,bam-tx-ep-pipe-index = <2>;
-		qcom,bam-rx-ep-pipe-index = <3>;
-		qcom,msm-bus,name = "blsp1_uart2_hs";
-		qcom,msm-bus,num-cases = <2>;
-		qcom,msm-bus,num-paths = <1>;
-		qcom,msm-bus,vectors-KBps =
-				<86 512 0 0>,
-				<86 512 500 800>;
-		status = "okay";
-	};
+//	blsp1_uart2_hs: uart@78b0000 {		/*BLSP1 UART2*/
+//		compatible = "qcom,msm-hsuart-v14";
+//		reg = <0x78b0000 0x200>,
+//			<0x7884000 0x1f000>;
+//		reg-names = "core_mem", "bam_mem";
+//		interrupt-names = "core_irq", "bam_irq", "wakeup_irq";
+//		#address-cells = <0>;
+//		interrupt-parent = <&blsp1_uart2_hs>;
+//		interrupts = <0 1 2>;
+//		#interrupt-cells = <1>;
+//		interrupt-map-mask = <0xffffffff>;
+//		interrupt-map = <0 &intc 0 108 0
+//				1 &intc 0 238 0
+//				2 &msm_gpio 21 0>;
+//		qcom,inject-rx-on-wakeup;
+//		qcom,tx-gpio = <&msm_gpio 20 0>;
+//		qcom,rx-gpio = <&msm_gpio 21 0>;
+//		qcom,rx-char-to-inject = <0xfd>;
+//		qcom,master-id = <86>;
+//		clock-names = "core_clk", "iface_clk";
+//		clocks = <&clock_gcc clk_gcc_blsp1_uart2_apps_clk>,
+//				<&clock_gcc clk_gcc_blsp1_ahb_clk>;
+//		pinctrl-names = "sleep", "default";
+//		pinctrl-0 = <&blsp1_uart2_sleep>;
+//		pinctrl-1 = <&blsp1_uart2_active>;
+//
+//		qcom,bam-tx-ep-pipe-index = <2>;
+//		qcom,bam-rx-ep-pipe-index = <3>;
+//		qcom,msm-bus,name = "blsp1_uart2_hs";
+//		qcom,msm-bus,num-cases = <2>;
+//		qcom,msm-bus,num-paths = <1>;
+//		qcom,msm-bus,vectors-KBps =
+//				<86 512 0 0>,
+//				<86 512 500 800>;
+//		status = "okay";
+//	};
 
 	qcom,sps {
 		compatible = "qcom,msm_sps_4k";
