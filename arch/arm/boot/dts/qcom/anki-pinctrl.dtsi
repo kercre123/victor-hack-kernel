@@ -108,32 +108,6 @@
 			};
 		};
 
-//		blsp1_uart2_active: blsp1_uart2_active {
-//			mux {
-//				pins = "gpio20", "gpio21";
-//				function = "blsp_uart2";
-//			};
-//
-//			config {
-//				pins = "gpio20", "gpio21";
-//				drive-strength = <2>;
-//				bias-pull-up;
-//			};
-//		};
-
-//		blsp1_uart2_sleep: blsp1_uart2_sleep {
-//			mux {
-//				pins = "gpio20", "gpio21";
-//				function = "blsp_uart2";
-//			};
-//
-//			config {
-//				pins = "gpio20", "gpio21";
-//				drive-strength = <2>;
-//				bias-disable;
-//			};
-//		};
-
 		pmx_mdss {
 			mdss_dsi_active: mdss_dsi_active {
 				mux {
