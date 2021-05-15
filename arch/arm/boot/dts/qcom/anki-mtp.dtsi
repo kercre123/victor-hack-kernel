@@ -116,7 +116,7 @@
 //  pinctrl-states = "default";
 //  pinctrl-0 = <&blsp1_uart2_sleep>;
 //  pinctrl-1 = <&blsp1_uart2_active>;
-};
+//};
 
 / {
 	mtp_batterydata: qcom,battery-data {
