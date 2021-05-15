@@ -404,8 +404,8 @@
 				1 &intc 0 237 0
 				2 &msm_gpio 5 0>;
 		qcom,inject-rx-on-wakeup;
-		qcom,tx-gpio = <&msm_gpio 4 0>;
-		qcom,rx-gpio = <&msm_gpio 5 0>;
+		qcom,tx-gpio = <&msm_gpio 5 0>;
+		qcom,rx-gpio = <&msm_gpio 4 0>;
 		qcom,rx-char-to-inject = <0xfd>;
 		qcom,master-id = <86>;
 		clock-names = "core_clk", "iface_clk";
