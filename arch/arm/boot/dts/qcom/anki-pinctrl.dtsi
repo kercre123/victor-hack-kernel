@@ -80,6 +80,11 @@
 			};
 		};
 
+// Wire:
+// originally, uart_console_active set bias-disable, and
+// uart_console_sleep set bias-pull-up then drive-strength
+// to 16
+
 		uart_console_active: uart_console_active {
 			mux {
 				pins = "gpio4", "gpio5";
@@ -88,7 +93,7 @@
 			config {
 				pins = "gpio4", "gpio5";
 				drive-strength = <2>;
-				bias-disable;
+				bias-pull-up;
 			};
 		};
 		uart_console_sleep: uart_console_sleep {
@@ -98,8 +103,8 @@
 			};
 			config {
 				pins = "gpio4", "gpio5";
-				drive-strength = <16>;
-				bias-pull-up;
+				drive-strength = <2>;
+				bias-disable;
 			};
 		};
 
