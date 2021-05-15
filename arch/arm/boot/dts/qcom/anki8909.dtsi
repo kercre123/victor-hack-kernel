@@ -377,10 +377,6 @@
 			 < 1267200 >;
 	};
 
-	aliases {
-		uart2 = &blsp1_uart1_hs; // ttyHS2, what is now spine
-	};
-
 	blsp1_uart1: serial@78af000 {
 		compatible = "qcom,msm-lsuart-v14";
 		reg = <0x78af000 0x200>;
@@ -402,9 +398,9 @@
 		#address-cells = <0>;
 		interrupt-parent = <&blsp1_uart1_hs>;
 		interrupts = <0 1 2>;
-		#interrupt-cells = <1>;
-		#interrupt-map-mask = <0xffffffff>;
-		#interrupt-map = <0 &intc 0 107 0
+		interrupt-cells = <1>;
+		interrupt-map-mask = <0xffffffff>;
+		interrupt-map = <0 &intc 0 107 0
 				1 &intc 0 238 0
 				2 &msm_gpio 5 0>;
 		qcom,inject-rx-on-wakeup;
@@ -431,15 +427,15 @@
 	};
 
 
-	blsp1_uart2: serial@78b0000 {
-		compatible = "qcom,msm-lsuart-v14";
-		reg = <0x78b0000 0x200>;
-		interrupts = <0 108 0>;
-		status = "disabled";
-		clocks = <&clock_gcc clk_gcc_blsp1_uart2_apps_clk>,
-			 <&clock_gcc clk_gcc_blsp1_ahb_clk>;
-		clock-names = "core_clk", "iface_clk";
-	};
+//	blsp1_uart2: serial@78b0000 {
+//		compatible = "qcom,msm-lsuart-v14";
+//		reg = <0x78b0000 0x200>;
+//		interrupts = <0 108 0>;
+//		status = "disabled";
+//		clocks = <&clock_gcc clk_gcc_blsp1_uart2_apps_clk>,
+//			 <&clock_gcc clk_gcc_blsp1_ahb_clk>;
+//		clock-names = "core_clk", "iface_clk";
+//	};
 
 // disabling spine serial
 	//blsp1_uart2_hs: uart@78b0000 {		/*BLSP1 UART2*/
