@@ -104,19 +104,19 @@
 };
 
 &blsp1_uart1 {
-	status = "okay";
+	status = "disabled";
 	pinctrl-names = "default";
 	pinctrl-states = "default";
 	pinctrl-0 = <&uart_console_sleep>;
 	pinctrl-1 = <&uart_console_active>;
 };
-&blsp1_uart2 { // NDM
-  status = "disabled";
-	pinctrl-names = "default";
-  pinctrl-states = "default";
-  pinctrl-0 = <&blsp1_uart2_sleep>;
-  pinctrl-1 = <&blsp1_uart2_active>;
-};
+//&blsp1_uart2 { // NDM
+//  status = "disabled";
+//	pinctrl-names = "default";
+//  pinctrl-states = "default";
+//  pinctrl-0 = <&blsp1_uart2_sleep>;
+//  pinctrl-1 = <&blsp1_uart2_active>;
+//};
 
 / {
 	mtp_batterydata: qcom,battery-data {
