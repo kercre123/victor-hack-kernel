@@ -391,7 +391,7 @@
 // just experimenting
 	blsp1_uart1_hs: uart@78af000 {		/*BLSP1 UART2*/
 		compatible = "qcom,msm-hsuart-v14";
-		reg = <0x78af000 0x200>;
+		reg = <0x78af000 0x200>,
 			<0x7884000 0x1f000>;
 		reg-names = "core_mem", "bam_mem";
 		interrupt-names = "core_irq", "bam_irq", "wakeup_irq";
