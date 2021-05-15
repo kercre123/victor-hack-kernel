@@ -401,7 +401,7 @@
 		#interrupt-cells = <1>;
 		interrupt-map-mask = <0xffffffff>;
 		interrupt-map = <0 &intc 0 107 0
-				1 &intc 0 238 0
+				1 &msm_gpio 4 0
 				2 &msm_gpio 5 0>;
 		qcom,inject-rx-on-wakeup;
 		qcom,tx-gpio = <&msm_gpio 4 0>;
