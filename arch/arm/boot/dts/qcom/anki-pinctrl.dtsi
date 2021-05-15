@@ -92,7 +92,7 @@
 			};
 			config {
 				pins = "gpio4", "gpio5";
-				drive-strength = <2>;
+				drive-strength = <16>;
 				bias-pull-up;
 			};
 		};
@@ -103,8 +103,8 @@
 			};
 			config {
 				pins = "gpio4", "gpio5";
-				drive-strength = <2>;
-				bias-disable;
+				drive-strength = <16>;
+				bias-pull-up;
 			};
 		};
 
