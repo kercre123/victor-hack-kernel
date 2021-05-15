@@ -93,7 +93,7 @@
 			config {
 				pins = "gpio4", "gpio5";
 				drive-strength = <2>;
-				bias-pull-up;
+				bias-disable;
 			};
 		};
 		uart_console_sleep: uart_console_sleep {
@@ -103,8 +103,8 @@
 			};
 			config {
 				pins = "gpio4", "gpio5";
-				drive-strength = <2>;
-				bias-disable;
+				drive-strength = <16>;
+				bias-pull-up;
 			};
 		};
 
