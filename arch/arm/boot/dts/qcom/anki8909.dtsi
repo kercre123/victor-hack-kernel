@@ -404,8 +404,8 @@
 				1 &intc 0 237 0
 				2 &msm_gpio 5 0>;
 		qcom,inject-rx-on-wakeup;
-		qcom,tx-gpio = <&msm_gpio 5 0>;
-		qcom,rx-gpio = <&msm_gpio 4 0>;
+		qcom,tx-gpio = <&msm_gpio 4 0>;
+		qcom,rx-gpio = <&msm_gpio 5 0>;
 		qcom,rx-char-to-inject = <0xfd>;
 		qcom,master-id = <86>;
 		clock-names = "core_clk", "iface_clk";
@@ -415,8 +415,8 @@
 		pinctrl-0 = <&uart_console_sleep>;
 		pinctrl-1 = <&uart_console_active>;
 
-		qcom,bam-tx-ep-pipe-index = <2>;
-		qcom,bam-rx-ep-pipe-index = <3>;
+		qcom,bam-tx-ep-pipe-index = <0>;
+		qcom,bam-rx-ep-pipe-index = <1>;
 		qcom,msm-bus,name = "blsp1_uart1_hs";
 		qcom,msm-bus,num-cases = <2>;
 		qcom,msm-bus,num-paths = <1>;
