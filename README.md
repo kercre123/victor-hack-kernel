@@ -7,12 +7,19 @@ The main files that have been edited are at /arch/arm/boot/dts/qcom/anki*.dtsi
 Build instructions:
 
 `docker run -it vaddio/yocto-16.04:16.04-latest /bin/bash`
+
 `chmod 0777 . && su builduser`
+
 `curl https://anki-vic-pubfiles.anki.com/license/prod/1.0.0/licences/OStarball.v160.tgz | tar -xz`
+
 `rm -rf ~/opensource/kernel/msm-3.18/*`
+
 `cd ~/opensource/kernel/msm-3.18/`
+
 `git pull https://github.com/kercre123/victor-hack-kernel.git`
+
 `cd opensource/poky/build && source conf/set_bb_env.sh`
+
 `bitbake linux-quic`
 
 The kernel will be built in ~/opensource/poky/build/tmp-glibc/deploy/images/apq8009-robot-robot/zImage-dtb-apq8009-anki.bin
