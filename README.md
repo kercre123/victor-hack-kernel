@@ -4,6 +4,8 @@ This kernel has been edited to use RX1/TX1 (BLSP1_UART1) for spine communication
 
 The main files that have been edited are at /arch/arm/boot/dts/qcom/anki*.dtsi
 
+NOTE: This will only work on a DVT (Whiskey DVT1, Victor P1-3, Victor DVT1-4) prototype bot which has an ABOOT that doesn't check for a boot signature. If you run this on a newer bot and the bot bricks, that is your problem.
+
 Build instructions:
 
 `docker run -it vaddio/yocto-16.04:16.04-latest /bin/bash`
